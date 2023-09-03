@@ -1,0 +1,12 @@
+C:\Users\luis3\Documents\Repository\Binary-Data\BinaryDataManagement\bin\Debug\BinaryDataManagement.exe.config
+C:\Users\luis3\Documents\Repository\Binary-Data\BinaryDataManagement\bin\Debug\BinaryDataManagement.exe
+C:\Users\luis3\Documents\Repository\Binary-Data\BinaryDataManagement\bin\Debug\BinaryDataManagement.pdb
+C:\Users\luis3\Documents\Repository\Binary-Data\BinaryDataManagement\obj\Debug\BinaryDataManagement.csproj.AssemblyReference.cache
+C:\Users\luis3\Documents\Repository\Binary-Data\BinaryDataManagement\obj\Debug\BinaryDataManagement.Properties.Resources.resources
+C:\Users\luis3\Documents\Repository\Binary-Data\BinaryDataManagement\obj\Debug\BinaryDataManagement.csproj.GenerateResource.cache
+C:\Users\luis3\Documents\Repository\Binary-Data\BinaryDataManagement\obj\Debug\BinaryDataManagement.csproj.CoreCompileInputs.cache
+C:\Users\luis3\Documents\Repository\Binary-Data\BinaryDataManagement\obj\Debug\BinaryDataManagement.exe
+C:\Users\luis3\Documents\Repository\Binary-Data\BinaryDataManagement\obj\Debug\BinaryDataManagement.pdb
+C:\Users\luis3\Documents\Repository\Binary-Data\BinaryDataManagement\obj\Debug\BinaryDataManagement.Form1.resources
+C:\Users\luis3\Documents\Repository\Binary-Data\BinaryDataManagement\obj\Debug\BinaryDataManagement.Forms.FormData.resources
+C:\Users\luis3\Documents\Repository\Binary-Data\BinaryDataManagement\obj\Debug\BinaryDataManagement.Forms.FormMethod.resources
