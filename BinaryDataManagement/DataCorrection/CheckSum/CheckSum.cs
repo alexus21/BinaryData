@@ -14,7 +14,12 @@ namespace BinaryDataManagement.DataCorrection.CheckSum {
             }
             
             // Ahora, procedemos a hacer la suma binaria:
-            BinarySum.Sum(binaryDataString);
+            string myBinaryDataSender = BinarySum.Sum(binaryDataString);
+            string myCheckSum = FindOutCheckSum.ReturnCheckSum(myBinaryDataSender);
+            
+            Console.WriteLine("Sum: " + myBinaryDataSender);
+            Console.WriteLine("CheckSum: " + myCheckSum);
+            
         }
     }
 }
