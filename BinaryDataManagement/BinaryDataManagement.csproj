@@ -48,6 +48,9 @@
   <ItemGroup>
     <Compile Include="DataCorrection\CheckSum\BinarySum.cs" />
     <Compile Include="DataCorrection\CheckSum\CheckSum.cs" />
+    <Compile Include="DataCorrection\CheckSum\CompleteBits.cs" />
+    <Compile Include="DataCorrection\CheckSum\FindOutCheckSum.cs" />
+    <Compile Include="DataCorrection\CheckSum\LookOutForMistakes.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

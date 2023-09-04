@@ -1,6 +1,9 @@
 ﻿namespace BinaryDataManagement.DataCorrection.CheckSum {
-    public class BinarySum {
-        public int Sum(int[] binaryElement) {
+    public static class BinarySum {
+        public  static int Sum(string binaryData) {
+            
+            
+            
             return 0;
         }
     }

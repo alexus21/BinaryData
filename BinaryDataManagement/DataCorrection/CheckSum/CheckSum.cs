@@ -3,22 +3,18 @@ using System.Collections.Generic;
 
 namespace BinaryDataManagement.DataCorrection.CheckSum {
     public static class CheckSum {
+        const int MaxBits = 6;
 
-        static int _maxBits = 6;
-        
-        public static void FindCheckSum(List<int[]> dataList) {
-            foreach (var binaryNumber in dataList) {
-                if (binaryNumber.Length < _maxBits) {
-                    
-                }
+        public static void FindCheckSum(string binaryDataString) {
+            Console.WriteLine("\n");
+
+            // Primero, comprobamos que sea de 6 bits; caso contrario, rellenamos con 0s:
+            if (binaryDataString.Length % 6 != 0) {
+                binaryDataString = CompleteBits.FillWithZeros(binaryDataString);
             }
-        }
-
-        // Llenamos el numero binario con ceros si este no es de 6 bits:
-        static int[] _ComplementArray(int[] arrayToFill) {
-            int howManyZeros = _maxBits - arrayToFill.Length;
             
-            
+            // Ahora, procedemos a hacer la suma binaria:
+            BinarySum.Sum(binaryDataString);
         }
     }
 }
