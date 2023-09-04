@@ -46,11 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataCorrection\CheckSum\BinarySum.cs" />
+    <Compile Include="DataCorrection\CheckSum\CheckSum.cs" />
+    <Compile Include="DataCorrection\CheckSum\CompleteBits.cs" />
+    <Compile Include="DataCorrection\CheckSum\FindOutCheckSum.cs" />
+    <Compile Include="DataCorrection\CheckSum\LookOutForMistakes.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CheckSumForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CheckSumForm.Designer.cs">
+      <DependentUpon>CheckSumForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormData.cs">
       <SubType>Form</SubType>
@@ -69,6 +80,9 @@
     <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CheckSumForm.resx">
+      <DependentUpon>CheckSumForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormData.resx">
       <DependentUpon>FormData.cs</DependentUpon>
