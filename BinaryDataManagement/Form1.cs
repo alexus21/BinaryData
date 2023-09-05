@@ -90,7 +90,7 @@ namespace BinaryDataManagement {
         }
 
         private void btnMethodError_Click(object sender, EventArgs e) {
-            OpenChildForm(new Forms.FormMethod(), sender);
+            OpenChildForm(new Forms.CheckSumForm(), sender);
         }
 
         private void btnClose_Click(object sender, EventArgs e) {
@@ -106,6 +106,10 @@ namespace BinaryDataManagement {
             panelLogo.BackColor = Color.FromArgb(39, 39, 58);
             currentButton = null;
             btnClose.Visible = false;
+        }
+
+        private void btnPariedad_Click(object sender, EventArgs e) {
+            OpenChildForm(new Forms.ParidadForm(), sender);
         }
     }
 }

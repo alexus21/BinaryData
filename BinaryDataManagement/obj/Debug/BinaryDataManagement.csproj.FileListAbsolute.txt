@@ -24,3 +24,17 @@ C:\Users\alexu\OneDrive\Documentos\Universidad\Ciclo VI\Arquitectura de Computad
 C:\Users\alexu\OneDrive\Documentos\Universidad\Ciclo VI\Arquitectura de Computadoras\Computo 1\BinaryDataManagement\BinaryDataManagement\obj\Debug\BinaryDataManagement.exe
 C:\Users\alexu\OneDrive\Documentos\Universidad\Ciclo VI\Arquitectura de Computadoras\Computo 1\BinaryDataManagement\BinaryDataManagement\obj\Debug\BinaryDataManagement.pdb
 C:\Users\alexu\OneDrive\Documentos\Universidad\Ciclo VI\Arquitectura de Computadoras\Computo 1\BinaryDataManagement\BinaryDataManagement\obj\Debug\BinaryDataManagement.Forms.CheckSumForm.resources
+C:\Users\luis3\Documents\Repository\ejemplo\BinaryDataManagement\bin\Debug\BinaryDataManagement.exe.config
+C:\Users\luis3\Documents\Repository\ejemplo\BinaryDataManagement\bin\Debug\BinaryDataManagement.exe
+C:\Users\luis3\Documents\Repository\ejemplo\BinaryDataManagement\bin\Debug\BinaryDataManagement.pdb
+C:\Users\luis3\Documents\Repository\ejemplo\BinaryDataManagement\obj\Debug\BinaryDataManagement.csproj.AssemblyReference.cache
+C:\Users\luis3\Documents\Repository\ejemplo\BinaryDataManagement\obj\Debug\BinaryDataManagement.Form1.resources
+C:\Users\luis3\Documents\Repository\ejemplo\BinaryDataManagement\obj\Debug\BinaryDataManagement.Forms.CheckSumForm.resources
+C:\Users\luis3\Documents\Repository\ejemplo\BinaryDataManagement\obj\Debug\BinaryDataManagement.Forms.FormData.resources
+C:\Users\luis3\Documents\Repository\ejemplo\BinaryDataManagement\obj\Debug\BinaryDataManagement.Forms.FormMethod.resources
+C:\Users\luis3\Documents\Repository\ejemplo\BinaryDataManagement\obj\Debug\BinaryDataManagement.Properties.Resources.resources
+C:\Users\luis3\Documents\Repository\ejemplo\BinaryDataManagement\obj\Debug\BinaryDataManagement.csproj.GenerateResource.cache
+C:\Users\luis3\Documents\Repository\ejemplo\BinaryDataManagement\obj\Debug\BinaryDataManagement.csproj.CoreCompileInputs.cache
+C:\Users\luis3\Documents\Repository\ejemplo\BinaryDataManagement\obj\Debug\BinaryDataManagement.exe
+C:\Users\luis3\Documents\Repository\ejemplo\BinaryDataManagement\obj\Debug\BinaryDataManagement.pdb
+C:\Users\luis3\Documents\Repository\ejemplo\BinaryDataManagement\obj\Debug\BinaryDataManagement.Forms.ParidadForm.resources

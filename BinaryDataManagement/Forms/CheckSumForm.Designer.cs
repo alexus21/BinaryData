@@ -29,25 +29,29 @@
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMessage
             // 
             this.lblMessage.AutoSize = true;
-            this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMessage.Location = new System.Drawing.Point(41, 36);
+            this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.Location = new System.Drawing.Point(153, 44);
+            this.lblMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(304, 20);
+            this.lblMessage.Size = new System.Drawing.Size(358, 24);
             this.lblMessage.TabIndex = 0;
             this.lblMessage.Text = "Por favor, ingrese aquí el dato a transmitir:";
             // 
             // btnSendData
             // 
-            this.btnSendData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSendData.Location = new System.Drawing.Point(420, 73);
+            this.btnSendData.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendData.Location = new System.Drawing.Point(658, 90);
+            this.btnSendData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSendData.Name = "btnSendData";
-            this.btnSendData.Size = new System.Drawing.Size(101, 33);
+            this.btnSendData.Size = new System.Drawing.Size(135, 41);
             this.btnSendData.TabIndex = 1;
             this.btnSendData.Text = "Transmitir";
             this.btnSendData.UseVisualStyleBackColor = true;
@@ -56,10 +60,11 @@
             // txtEnterData
             // 
             this.txtEnterData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEnterData.Location = new System.Drawing.Point(44, 73);
+            this.txtEnterData.Location = new System.Drawing.Point(157, 90);
+            this.txtEnterData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEnterData.Multiline = true;
             this.txtEnterData.Name = "txtEnterData";
-            this.txtEnterData.Size = new System.Drawing.Size(370, 31);
+            this.txtEnterData.Size = new System.Drawing.Size(492, 37);
             this.txtEnterData.TabIndex = 2;
             this.txtEnterData.Enter += new System.EventHandler(this.txtEnterData_Enter);
             this.txtEnterData.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEnterData_KeyPress);
@@ -69,31 +74,41 @@
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
-            this.dataGridView.Location = new System.Drawing.Point(12, 144);
+            this.dataGridView.Location = new System.Drawing.Point(114, 177);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(538, 298);
+            this.dataGridView.RowHeadersWidth = 51;
+            this.dataGridView.Size = new System.Drawing.Size(717, 367);
             this.dataGridView.TabIndex = 8;
             // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column1.HeaderText = "Suma de datos";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
             // 
             // CheckSumForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(562, 466);
+            this.ClientSize = new System.Drawing.Size(1113, 574);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.txtEnterData);
             this.Controls.Add(this.btnSendData);
             this.Controls.Add(this.lblMessage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "CheckSumForm";
-            this.Text = "CheckSumForm";
+            this.Text = "CheckSum";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,5 +122,6 @@
         private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
     }
 }
