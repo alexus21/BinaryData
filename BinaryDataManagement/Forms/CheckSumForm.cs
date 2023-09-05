@@ -58,7 +58,7 @@ namespace BinaryDataManagement.Forms {
             dataGridView.Rows.Add("Resultado de la suma: " + binarySum);
             dataGridView.Rows.Add("Checksum: " + checksum);
             dataGridView.Rows.Add("Dato transmitido: " + completeData);
-            dataGridView.Rows.Add("Resultado: " + rusult);
+            dataGridView.Rows.Add("Resultado: " + result);
 
             // Marca las filas como no editables
             for (int i = 0; i < 4; i++) {

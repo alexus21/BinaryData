@@ -38,3 +38,4 @@ C:\Users\luis3\Documents\Repository\ejemplo\BinaryDataManagement\obj\Debug\Binar
 C:\Users\luis3\Documents\Repository\ejemplo\BinaryDataManagement\obj\Debug\BinaryDataManagement.exe
 C:\Users\luis3\Documents\Repository\ejemplo\BinaryDataManagement\obj\Debug\BinaryDataManagement.pdb
 C:\Users\luis3\Documents\Repository\ejemplo\BinaryDataManagement\obj\Debug\BinaryDataManagement.Forms.ParidadForm.resources
+C:\Users\alexu\OneDrive\Documentos\Universidad\Ciclo VI\Arquitectura de Computadoras\Computo 1\BinaryDataManagement\BinaryDataManagement\obj\Debug\BinaryDataManagement.Forms.ParidadForm.resources
