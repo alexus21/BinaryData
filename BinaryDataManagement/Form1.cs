@@ -26,12 +26,10 @@ namespace BinaryDataManagement {
             //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
-        private Color SelectThemeColor()
-        {
+        private Color SelectThemeColor() {
             int index = random.Next(ThemeColor.ColorList.Count);
 
-            while (tempIndex == index)
-            {
+            while (tempIndex == index) {
                 index = random.Next(ThemeColor.ColorList.Count);
             }
 
@@ -40,12 +38,9 @@ namespace BinaryDataManagement {
             return ColorTranslator.FromHtml(color);
         }
 
-        private void ActivateButton(object btnSender)
-        {
-            if (btnSender != null)
-            {
-                if (currentButton != (Button)btnSender)
-                {
+        private void ActivateButton(object btnSender) {
+            if (btnSender != null) {
+                if (currentButton != (Button)btnSender) {
                     DisableButton();
                     Color color = SelectThemeColor();
                     currentButton = (Button)btnSender;
@@ -63,12 +58,9 @@ namespace BinaryDataManagement {
             }
         }
 
-        private void DisableButton()
-        {
-            foreach (Control previousBtn in panelMenu.Controls)
-            {
-                if (previousBtn.GetType() == typeof(Button))
-                {
+        private void DisableButton() {
+            foreach (Control previousBtn in panelMenu.Controls) {
+                if (previousBtn.GetType() == typeof(Button)) {
                     previousBtn.BackColor = Color.FromArgb(51, 51, 76);
                     previousBtn.ForeColor = Color.Gainsboro;
                     previousBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -76,8 +68,7 @@ namespace BinaryDataManagement {
             }
         }
 
-        private void OpenChildForm(Form childForm, object btnSender)
-        {
+        public void OpenChildForm(Form childForm, object btnSender) {
             if (activeForm != null)
                 activeForm.Close();
             ActivateButton(btnSender);
@@ -90,35 +81,35 @@ namespace BinaryDataManagement {
             childForm.BringToFront();
             childForm.Show();
             lblTitle.Text = childForm.Text;
-            lblTitle.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom; 
+            lblTitle.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
             //lblTitle.Location = new System.Drawing.Point(300, 20);
         }
 
-        private void btnData_Click(object sender, EventArgs e)
-        {
+        private void btnData_Click(object sender, EventArgs e) {
             OpenChildForm(new Forms.FormData(), sender);
         }
 
-        private void btnMethodError_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.FormMethod(), sender);
+        private void btnMethodError_Click(object sender, EventArgs e) {
+            OpenChildForm(new Forms.CheckSumForm(), sender);
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
+        private void btnClose_Click(object sender, EventArgs e) {
             if (activeForm != null)
                 activeForm.Close();
             Reset();
         }
 
-        private void Reset()
-        {
+        private void Reset() {
             DisableButton();
             lblTitle.Text = "HOME";
             panelTitleBar.BackColor = Color.FromArgb(0, 150, 136);
             panelLogo.BackColor = Color.FromArgb(39, 39, 58);
             currentButton = null;
             btnClose.Visible = false;
+        }
+
+        private void btnPariedad_Click(object sender, EventArgs e) {
+            OpenChildForm(new Forms.ParidadForm(), sender);
         }
     }
 }

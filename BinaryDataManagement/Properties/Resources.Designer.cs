@@ -123,6 +123,16 @@ namespace BinaryDataManagement.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconParidad {
+            get {
+                object obj = ResourceManager.GetObject("iconParidad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconsExit {
             get {
                 object obj = ResourceManager.GetObject("iconsExit", resourceCulture);
