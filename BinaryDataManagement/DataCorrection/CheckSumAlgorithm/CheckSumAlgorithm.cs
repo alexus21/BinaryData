@@ -1,4 +1,6 @@
-﻿namespace BinaryDataManagement.DataCorrection.CheckSumAlgorithm {
+﻿using System;
+
+namespace BinaryDataManagement.DataCorrection.CheckSumAlgorithm {
     public class CheckSumAlgorithm {
 
         // Estructura para almacenar los resultados de la verificación
@@ -80,6 +82,7 @@
 
             // Convertir el resultado (quitar los espacios):
             string resultStr = string.Join("", result);
+            Console.Write("Suma: " + resultStr);
             return resultStr;
         }
 
@@ -114,6 +117,10 @@
                 if (sent[i] != received[i]) {
                     positionsWhereAreDifferents += (i + 1) + ", ";
                 }
+            }
+
+            if (positionsWhereAreDifferents.Length == 0) {
+                positionsWhereAreDifferents = "Ninguna";
             }
     
             return positionsWhereAreDifferents;

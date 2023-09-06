@@ -42,12 +42,6 @@ namespace BinaryDataManagement.Forms {
         void txtSent_TextChanged(object sender, EventArgs e) {
             // Elimina cualquier carácter no válido
             _binaryDataSent = new string(txtSent.Text.Where(c => c == '0' || c == '1').ToArray());
-
-            // Limita la longitud a 6 dígitos
-            if (_binaryDataSent.Length > 6) {
-                MessageBox.Show("Límite de bits alcanzado");
-                _binaryDataSent = _binaryDataSent.Substring(0, 6);
-            }
             
             // Actualiza el valor del cuadro de texto
             txtSent.Text = _binaryDataSent; 
@@ -69,6 +63,13 @@ namespace BinaryDataManagement.Forms {
             txtReceived.Text = _binaryDataReceived; 
             // Coloca el cursor al final del texto
             txtReceived.SelectionStart = _binaryDataReceived.Length; 
+        }
+        
+        void btnHelp_Click(object sender, EventArgs e) {
+            MessageBox.Show("Ingrese acá todos los datos de 6 bits a transmitir. \n" +
+                            "Debe ingresarlos de corrido, el programa se encargará de \n" +
+                            "subdividir la cadena en elementos de 6 bits y de complementar con 0s\n" +
+                            "al final si hay faltantes.");
         }
 
         void btnCheck_Click(object sender, EventArgs e) {
@@ -113,7 +114,7 @@ namespace BinaryDataManagement.Forms {
                 dataGridView.Rows[i].ReadOnly = true;
             }
         }
-        
+
         void UpdateDataGridFont() {
             //Change cell font
             foreach(DataGridViewColumn c in dataGridView.Columns) {
