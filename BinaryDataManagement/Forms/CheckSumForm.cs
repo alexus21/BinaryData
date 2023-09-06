@@ -122,10 +122,6 @@ namespace BinaryDataManagement.Forms {
         void CheckSum(string binaryDataSent, string binaryDataReceived) {
             const int maxBits = 6;
             
-            Console.WriteLine("\n");
-            
-            
-
             // Primero, comprobamos que sea de 6 bits; caso contrario, rellenamos con 0s:
             if (binaryDataSent.Length % maxBits != 0) {
                 binaryDataSent = FillWithZeros(binaryDataSent);
@@ -136,9 +132,9 @@ namespace BinaryDataManagement.Forms {
             }
             
             // Ahora, procedemos a hacer la suma binaria:
-            string myBinaryDataSum = Sum(binaryDataSent, binaryDataReceived);
-            string myCheckSum = ReturnCheckSum(myBinaryDataSum);
-            string result = FindMistakes(myBinaryDataSum, myCheckSum);
+            string myCheckSum = ReturnCheckSum(binaryDataSent);
+            string myBinaryDataSum = Sum(binaryDataReceived, myCheckSum);
+            string result = ReturnCheckSum(myBinaryDataSum);
 
             bool isAllOk = true;
             
@@ -165,11 +161,11 @@ namespace BinaryDataManagement.Forms {
         #endregion
         
         #region BinarySum
-        string Sum(string binaryDataSent, string binaryDataReceived) {
+        string Sum(string binaryDataSent, string checksum) {
             List<string> subStrings = new List<string>();
             
             subStrings.Add(binaryDataSent);
-            subStrings.Add(binaryDataReceived);
+            subStrings.Add(checksum);
 
             int[] result = new int[6];
             int carry = 0;
@@ -211,14 +207,6 @@ namespace BinaryDataManagement.Forms {
         }
 
 
-        #endregion
-
-        #region VerifyData
-        string FindMistakes(string data, string checkSum) {
-            string result = Sum(data, checkSum);
-            string hasMistakes = ReturnCheckSum(result);
-            return hasMistakes;
-        }
         #endregion
         
         #region SolveMistake
