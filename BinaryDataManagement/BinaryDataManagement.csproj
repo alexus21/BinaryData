@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataCorrection\CheckSumAlgorithm\CheckSumAlgorithm.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,9 +138,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconsExit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataCorrection\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconParidad.png" />
