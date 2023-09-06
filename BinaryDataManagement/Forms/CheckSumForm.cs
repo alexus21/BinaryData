@@ -75,6 +75,7 @@ namespace BinaryDataManagement.Forms {
             if (txtSent.Text == "" || txtReceived.Text == "") {
                 MessageBox.Show("Error: debes proveer un dato a transmitir.");
             } else {
+                dataGridView.Rows.Clear();
                 btnCheck.Enabled = false;
                 dataGridView.Rows.Add("Dato transmitido: " + FillWithZeros(_binaryDataSent));
                 dataGridView.Rows.Add("Dato recibido: " + FillWithZeros(_binaryDataReceived));
