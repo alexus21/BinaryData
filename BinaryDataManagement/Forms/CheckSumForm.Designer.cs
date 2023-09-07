@@ -28,11 +28,12 @@
             this.txtSent = new System.Windows.Forms.TextBox();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.lblReceivedData = new System.Windows.Forms.Label();
             this.txtReceived = new System.Windows.Forms.TextBox();
             this.btnReset = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnHelp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +62,7 @@
             // txtSent
             // 
             this.txtSent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSent.Location = new System.Drawing.Point(384, 12);
+            this.txtSent.Location = new System.Drawing.Point(417, 12);
             this.txtSent.Multiline = true;
             this.txtSent.Name = "txtSent";
             this.txtSent.Size = new System.Drawing.Size(219, 31);
@@ -79,6 +80,13 @@
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.Size = new System.Drawing.Size(748, 284);
             this.dataGridView.TabIndex = 8;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "Resultados";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
             // 
             // fileSystemWatcher1
             // 
@@ -98,7 +106,7 @@
             // txtReceived
             // 
             this.txtReceived.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReceived.Location = new System.Drawing.Point(384, 92);
+            this.txtReceived.Location = new System.Drawing.Point(417, 92);
             this.txtReceived.Multiline = true;
             this.txtReceived.Name = "txtReceived";
             this.txtReceived.Size = new System.Drawing.Size(219, 31);
@@ -117,18 +125,22 @@
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
-            // Column1
+            // btnHelp
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "Resultados";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
+            this.btnHelp.Location = new System.Drawing.Point(384, 21);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(26, 23);
+            this.btnHelp.TabIndex = 9;
+            this.btnHelp.Text = "?";
+            this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // CheckSumForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(771, 466);
+            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.txtReceived);
             this.Controls.Add(this.txtSent);
@@ -159,5 +171,6 @@
         private System.Windows.Forms.Label lblReceivedData;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.Button btnHelp;
     }
 }
