@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -110,6 +111,35 @@ namespace BinaryDataManagement.Forms
                     MessageBox.Show("Solo se permiten números enteros con signo en esta opción.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            else if (cmbBoxTipeData.SelectedIndex == 3)
+            {
+
+            }
+            else if (cmbBoxTipeData.SelectedIndex == 4)
+            {
+                // Obtener el texto actual en txtData
+                string currentText = txtData.Text;
+
+                // Verificar si el usuario presiona Backspace, simplemente permitirlo
+                if (e.KeyChar == (char)Keys.Back)
+                {
+                    return;
+                }
+
+                // Crear una expresión regular para validar caracteres ASCII de 7 bits
+                Regex regex = new Regex("^[\\x00-\\x7F]$");
+
+                // Verificar si el carácter ingresado es válido
+                if (!regex.IsMatch(currentText + e.KeyChar))
+                {
+                    e.Handled = true; // Suprimir el carácter ingresado
+                    MessageBox.Show("Ingrese exactamente un carácter ASCII válido de 7 bits (0-127).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (cmbBoxTipeData.SelectedIndex == 5)
+            {
+
+            }
         }
 
         // Función para validar si una cadena es un número entero sin signo en un rango específico(Entero sin signo no válido)
@@ -204,6 +234,29 @@ namespace BinaryDataManagement.Forms
                     // Mostrar el bit más significativo y el valor binario completo en el Label lblResult
                     lblResult.Text = "Bit más significativo: " + msb.ToString() + Environment.NewLine + "Valor binario: " + formattedBinary;
                 }
+            }
+            else if (cmbBoxTipeData.SelectedIndex == 3)
+            {
+
+            }
+            else if (cmbBoxTipeData.SelectedIndex == 4)
+            {
+                // Obtener el texto actual en txtData
+                string currentText = txtData.Text;
+
+                char inputChar = currentText[0];
+
+                // Convertir el carácter a su representación binaria de 32 bits
+                string binaryValue = Convert.ToString(inputChar, 2).PadLeft(32, '0');
+
+                string formattedBinary = string.Join(" ", Enumerable.Range(0, 8).Select(i => binaryValue.Substring(i * 4, 4)));
+
+                // Mostrar la representación binaria en el Label lblResult
+                lblResult.Text = "Valor Binario: " + formattedBinary;
+            }
+            else if (cmbBoxTipeData.SelectedIndex == 5)
+            {
+
             }
         }
     }        
