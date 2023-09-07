@@ -1,4 +1,6 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace BinaryDataManagement.DataCorrection.CheckSumAlgorithm {
     public class CheckSumAlgorithm {
@@ -27,7 +29,7 @@ namespace BinaryDataManagement.DataCorrection.CheckSumAlgorithm {
             }
             
             // Luego, calculamos la suma de comprobación y la suma de datos binarios
-            string myCheckSum = ReturnCheckSum(binaryDataSent);
+            string myCheckSum = ReturnCheckSum(Sum(binaryDataSent));
             string myBinaryDataSum = Sum(binaryDataReceived, myCheckSum);
             
             // Calculamos una segunda suma de comprobación para verificar la integridad
@@ -66,7 +68,7 @@ namespace BinaryDataManagement.DataCorrection.CheckSumAlgorithm {
         }
         
         // Función para realizar la suma binaria
-        string Sum(string binaryDataSent, string checksum) {
+        string Sum(string binaryDataReceived, string checksum) {
             int[] result = new int[6];
             int carry = 0;
 
@@ -75,14 +77,38 @@ namespace BinaryDataManagement.DataCorrection.CheckSumAlgorithm {
                 // Esta línea de código realiza la suma binaria
                 // en las posiciones de las cadenas, teniendo en cuenta cualquier 
                 // acarreo previo.
-                int valor = int.Parse(binaryDataSent[i].ToString()) + int.Parse(checksum[i].ToString()) + carry;
+                int valor = int.Parse(binaryDataReceived[i].ToString()) + int.Parse(checksum[i].ToString()) + carry;
                 result[i] = valor % 2;
                 carry = valor / 2;
             }
 
             // Convertir el resultado (quitar los espacios):
             string resultStr = string.Join("", result);
-            Console.Write("Suma: " + resultStr);
+            return resultStr;
+        }
+
+        string Sum(string binaryData) {
+            List<string> subStrings = new List<string>();
+
+            // Dividir la cadena en subcadenas de 6 bits c/u
+            for (int i = 0; i < binaryData.Length; i += 6) {
+                subStrings.Add(binaryData.Substring(i, 6));
+            }
+
+            int[] result = new int[6];
+            int carry = 0;
+
+            // Sumar los elementos de cada posición aplicando la lógica de suma binaria
+            foreach (string s in subStrings) {
+                for (int i = 5, j = s.Length - 1; i >= 0; i--, j--) {
+                    int valor = int.Parse(s[j].ToString()) + result[i] + carry;
+                    result[i] = valor % 2;
+                    carry = valor / 2;
+                }
+            }
+
+            // Convertir el resultado (quitar los espacios):
+            string resultStr = string.Join("", result);
             return resultStr;
         }
 
