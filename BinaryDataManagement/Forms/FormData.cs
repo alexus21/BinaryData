@@ -133,13 +133,31 @@ namespace BinaryDataManagement.Forms
                 if (!regex.IsMatch(currentText + e.KeyChar))
                 {
                     e.Handled = true; // Suprimir el carácter ingresado
-                    MessageBox.Show("Ingrese exactamente un carácter ASCII válido de 7 bits (0-127).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Ingrese exactamente un carácter ASCII válido de 7 bits.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else if (cmbBoxTipeData.SelectedIndex == 5)
             {
+                // Obtener el texto actual en txtData
+                string currentText = txtData.Text;
 
+                // Calcular la cantidad total de bits en la cadena
+                int totalBits = currentText.Length * 8; // Suponiendo que estás utilizando una codificación Unicode de 16 bits (UTF-16)
+
+                // Verificar si el usuario presiona Backspace, simplemente permitirlo
+                if (e.KeyChar == (char)Keys.Back)
+                {
+                    return;
+                }
+                
+                // Verificar si la cadena tiene más de 32 bits
+                if (totalBits >= 32)
+                {
+                    e.Handled = true; // Suprimir la entrada
+                    MessageBox.Show("La cadena no puede tener más de 32 bits en total.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+
         }
 
         // Función para validar si una cadena es un número entero sin signo en un rango específico(Entero sin signo no válido)
@@ -252,12 +270,26 @@ namespace BinaryDataManagement.Forms
                 string formattedBinary = string.Join(" ", Enumerable.Range(0, 8).Select(i => binaryValue.Substring(i * 4, 4)));
 
                 // Mostrar la representación binaria en el Label lblResult
-                lblResult.Text = "Valor Binario: " + formattedBinary;
+                lblResult.Text = "Caracter: " + txtData.Text + Environment.NewLine + "Valor Binario: " + formattedBinary;
             }
             else if (cmbBoxTipeData.SelectedIndex == 5)
             {
+                // Obtener el texto actual en txtData
+                string currentText = txtData.Text;
+                
+                // Convertir cada carácter a su representación binaria de 8 bits
+                string binaryValue = string.Join("", currentText.Select(c => Convert.ToString(c, 2).PadLeft(8, '0')));
 
+                binaryValue = binaryValue.PadLeft(32, '0');
+                
+                string formattedBinary = string.Join(" ", Enumerable.Range(0, 8).Select(i => binaryValue.Substring(i * 4, 4)));
+
+                // Mostrar la representación binaria en el Label lblResult
+                lblResult.Text = "Cadena: " + txtData.Text + Environment.NewLine + "Valor Binario: " + formattedBinary;
             }
+            
+            txtData.Clear();
+            txtData.Focus();
         }
     }        
 }
