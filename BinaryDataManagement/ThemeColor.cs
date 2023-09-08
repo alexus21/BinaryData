@@ -9,8 +9,7 @@ namespace BinaryDataManagement
 {
     public static class ThemeColor
     {
-        //public static Color PrimaryColor { get; set; }
-        //public static Color SecondaryColor { get; set; }
+        // Lista de cadena llamada ColorList e inicializa la lista con una serie de códigos de colores en formato hexadecimal.
         public static List<string> ColorList = new List<string>() { "#3F51B5",
                                                                     "#009688",
                                                                     "#FF5722",
@@ -38,13 +37,15 @@ namespace BinaryDataManagement
                                                                     "#43B76E",
                                                                     "#7BCFE9",
                                                                     "#B71C46"};
+        
+        // El objetivo de este método es ajustar el brillo del color en función del factor de corrección proporcionado.
         public static Color ChangeColorBrightness(Color color, double correctionFactor)
         {
             double red = color.R;
             double green = color.G;
             double blue = color.B;
 
-            // If correction factor is less than 0, darken color.
+            // Este bloque de código se ejecuta si correctionFactor es menor que 0, lo que significa que se quiere oscurecer el color.
             if (correctionFactor < 0)
             {
                 correctionFactor = 1 + correctionFactor;
@@ -52,15 +53,15 @@ namespace BinaryDataManagement
                 green *= correctionFactor;
                 blue *= correctionFactor;
             }
-
-            // If correction factor is greater than zero, lighten color.
+            // Este bloque se ejecuta si correctionFactor es igual o mayor que 0, lo que significa que se quiere aclarar el color.
             else
             {
                 red = (255 - red) * correctionFactor + red;
                 green = (255 - green) * correctionFactor + green;
                 blue = (255 - blue) * correctionFactor + blue;
             }
-
+            
+            // Esto crea un nuevo objeto Color con los componentes de color ajustados y lo devuelve como resultado del método.
             return Color.FromArgb(color.A, (byte)red, (byte)green, (byte)blue);
         }
     }
