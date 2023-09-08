@@ -12,21 +12,24 @@ using System.Windows.Forms;
 namespace BinaryDataManagement {
     public partial class Form1 :Form {
 
+        //  Almacena el botón actualmente seleccionado en el menú.
         private Button currentButton;
+        // Un objeto Random utilizado para generar números aleatorios.
         private Random random;
+        // Una variable temporal para evitar que se elija el mismo color repetidamente.
         private int tempIndex;
+        // Almacena la instancia del formulario activo actualmente.
         private Form activeForm;
 
+        // En el constructor, se inicializan las variables y se oculta el botón btnClose
         public Form1() {
             InitializeComponent();
             random = new Random();
             btnClose.Visible = false;
-            //this.Text = string.Empty;
-            //this.ControlBox = false;
-            //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
-        private Color SelectThemeColor() {
+        // Este método selecciona un color aleatorio de una lista predefinida de colores en formato hexadecimal.
+        public Color SelectThemeColor() {
             int index = random.Next(ThemeColor.ColorList.Count);
 
             while (tempIndex == index) {
@@ -38,6 +41,8 @@ namespace BinaryDataManagement {
             return ColorTranslator.FromHtml(color);
         }
 
+        /* Este método se utiliza para resaltar el botón del menú seleccionado.
+        Cambia el color de fondo, el color de fuente y otros aspectos visuales del botón seleccionado. */
         private void ActivateButton(object btnSender) {
             if (btnSender != null) {
                 if (currentButton != (Button)btnSender) {
@@ -51,13 +56,11 @@ namespace BinaryDataManagement {
                     panelTitleBar.BackColor = color;
                     panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     btnClose.Visible = true;
-                    //ThemeColor.PrimaryColor = color;
-                    //ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
-                    //btnCloseChildForm.Visible = true;
                 }
             }
         }
 
+        // Este método desactiva todos los botones del menú, restableciendo sus estilos.
         private void DisableButton() {
             foreach (Control previousBtn in panelMenu.Controls) {
                 if (previousBtn.GetType() == typeof(Button)) {
@@ -68,6 +71,8 @@ namespace BinaryDataManagement {
             }
         }
 
+        /* Este método se utiliza para abrir un formulario secundario dentro del formulario principal.
+        Cierra cualquier formulario secundario abierto anteriormente y luego muestra el nuevo formulario seleccionado. */
         public void OpenChildForm(Form childForm, object btnSender) {
             if (activeForm != null)
                 activeForm.Close();
@@ -82,9 +87,10 @@ namespace BinaryDataManagement {
             childForm.Show();
             lblTitle.Text = childForm.Text;
             lblTitle.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
-            //lblTitle.Location = new System.Drawing.Point(300, 20);
         }
 
+        /* Estos manejadores de eventos se activan cuando se hace clic en los botones del menú.
+        Llaman al método OpenChildForm para abrir el formulario secundario correspondiente. */
         private void btnData_Click(object sender, EventArgs e) {
             OpenChildForm(new Forms.FormData(), sender);
         }
@@ -99,6 +105,7 @@ namespace BinaryDataManagement {
             Reset();
         }
 
+        // Este método restablece la apariencia del menú y el título del formulario principal.
         private void Reset() {
             DisableButton();
             lblTitle.Text = "HOME";

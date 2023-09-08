@@ -8,15 +8,15 @@ using BinaryDataManagement.DataCorrection.CheckSumAlgorithm;
 
 namespace BinaryDataManagement.Forms {
     public partial class CheckSumForm :Form {
-
+        
         // Acá se almacenarán los datos a transmitir:
         string _binaryDataSent, _binaryDataReceived;
-
+        
         public CheckSumForm() {
             InitializeComponent();
             btnReset.Enabled = false;
         }
-
+        
         void txtSent_KeyPress(object sender, KeyPressEventArgs e) {
             // Si se ingresan valores diferentes a 0 y 1:
             if (e.KeyChar != '0' && e.KeyChar != '1' && e.KeyChar != (char)Keys.Back) {
