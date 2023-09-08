@@ -120,7 +120,50 @@ namespace BinaryDataManagement.Forms
             }
             else if (cmbBoxTipeData.SelectedIndex == 3)
             {
+                // Obtener el texto actual en txtData.
+                string currentText = txtData.Text;
 
+                // Si el usuario presiona Backspace, simplemente permitirlo.
+                if (e.KeyChar == (char)Keys.Back)
+                {
+                    return;
+                }
+
+                // Permitir el signo "-" o "+" solo en la primera posición.
+                if ((e.KeyChar == '-' || e.KeyChar == '+') && currentText.Length == 0)
+                {
+                    return;
+                }
+                
+                // Permitir solo un punto decimal en toda la cadena.
+                if (e.KeyChar == '.')
+                {
+                    if (currentText.Contains("."))
+                    {
+                        e.Handled = true; // Suprimir el carácter ingresado.
+                        MessageBox.Show("Solo se permite un punto decimal en esta opción.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+
+                // Verificar si el carácter es un dígito o un punto decimal.
+                if (char.IsDigit(e.KeyChar) || e.KeyChar == '.')
+                {
+                    // Agregar el nuevo carácter presionado.
+                    currentText += e.KeyChar;
+
+                    // Verificar si el valor resultante es válido en términos de representación de punto flotante de 32 bits.
+                    if (!IsValidFloat32(currentText))
+                    {
+                        e.Handled = true; // Suprimir el carácter ingresado.
+                        MessageBox.Show("El valor no puede exceder la representación de punto flotante de 32 bits.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    e.Handled = true; // Suprimir el carácter ingresado.
+                    MessageBox.Show("Solo se permiten números de punto flotante en esta opción.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else if (cmbBoxTipeData.SelectedIndex == 4)
             {
@@ -164,6 +207,18 @@ namespace BinaryDataManagement.Forms
                     MessageBox.Show("La cadena no puede tener más de 32 bits en total.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+        
+        // Función para validar si el número de punto flotante no excede la representación de 32 bits.
+        private bool IsValidFloat32(string input)
+        {
+            float floatValue;
+            if (float.TryParse(input, out floatValue))
+            {
+                // Verificar si el valor absoluto es menor o igual a 2^31 (rango de 32 bits con signo).
+                return Math.Abs(floatValue) <= Math.Pow(2, 31);
+            }
+            return false;
         }
 
         // Función para validar si una cadena es un número entero sin signo en un rango específico(Entero sin signo es válido).
@@ -264,7 +319,31 @@ namespace BinaryDataManagement.Forms
             }
             else if (cmbBoxTipeData.SelectedIndex == 3)
             {
+                // Obtener el texto actual en txtData
+                string currentText = txtData.Text.Trim();
 
+                // Validar que el texto no termine con un punto
+                if (currentText.EndsWith("."))
+                {
+                    // e.Handled = true; // Suprimir el carácter ingresado
+                    MessageBox.Show("El carácter '.' no puede estar al final del cuadro de texto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtData.Focus(); // Regresar el enfoque al cuadro de texto
+                    return;
+                }
+
+                // Convertir el texto a un número de punto flotante
+                if (float.TryParse(currentText, out float floatValue))
+                {
+                    // Convertir el valor a su representación binaria de 32 bits
+                    int intValue = BitConverter.ToInt32(BitConverter.GetBytes(floatValue), 0);
+                    string binaryValue = Convert.ToString(intValue, 2).PadLeft(32, '0');
+
+                    // Formatear la cadena binaria con separación de 4 bits por 4 bits
+                    string formattedBinary = string.Join(" ", Enumerable.Range(0, 8).Select(i => binaryValue.Substring(i * 4, 4)));
+
+                    // Mostrar la representación binaria en el Label lblResult
+                    lblResult.Text = "Número Flotante: " + txtData.Text + Environment.NewLine + "Valor Binario: " + formattedBinary;
+                }
             }
             else if (cmbBoxTipeData.SelectedIndex == 4)
             {
