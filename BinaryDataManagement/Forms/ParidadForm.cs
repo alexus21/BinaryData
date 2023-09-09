@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BinaryDataManagement.ParidadCorrection;
 
 namespace BinaryDataManagement.Forms
 {
@@ -17,6 +18,7 @@ namespace BinaryDataManagement.Forms
             InitializeComponent();
             richTextBox1.SelectionAlignment = HorizontalAlignment.Center;
             comboBox1.SelectedIndex = 0;
+            lblError.Text = string.Empty;
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -29,7 +31,30 @@ namespace BinaryDataManagement.Forms
             {
                 // Si no es uno de los caracteres permitidos, suprime el evento de tecla
                 e.Handled = true;
+                errorProvider1.SetError(textBox1, "Ingresa 0 o 1");
             }
+            else
+            {
+                errorProvider1.Clear();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = string.Empty;
+            if (!Validations.ValidateDataTextBox(textBox1))
+            {
+                lblError.Text = @"Ingresa el binario recibido";
+                return;
+            }
+
+            if (!Validations.ValidateSelection(comboBox1))
+            {
+                lblError.Text = @"Selecciona par o impar en la lista desplegable";
+                return;
+            }
+            lblError.Text = string.Empty;
+            Paridad.ValidateParidad(textBox1.Text, richTextBox1, (ParityType) (comboBox1.SelectedIndex - 1));
         }
     }
 }
