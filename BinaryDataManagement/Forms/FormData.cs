@@ -269,28 +269,36 @@ namespace BinaryDataManagement.Forms
                     string formattedBinary = string.Join(" ", Enumerable.Range(0, 8).Select(i => binaryValue.Substring(i * 4, 4)));
 
                     // Mostrar el resultado en lblResult.
-                    lblResult.Text = "Valor Binario: " + formattedBinary;
+                    lblResult.Text = "Entero sin signo: " + txtData.Text + Environment.NewLine + "Valor Binario: " + formattedBinary;
                 }
             }
             else if (cmbBoxTipeData.SelectedIndex == 1)
             {
                 // Obtener el valor entero con signo ingresado por el usuario.
-                string inputText = txtData.Text.Trim();
+                string inputText = txtData.Text;
 
                 // Verificar si el valor es un número entero con signo válido.
                 if (int.TryParse(inputText, out int signedValue))
                 {
-                    // Convertir el valor a su representación de complemento a uno (complemento a 1).
-                    int complementoUno = ~signedValue;
+                    // Calcular el complemento a uno manualmente.
+                    string binaryValue = Convert.ToString(signedValue, 2);
+                    string complementoUno = "";
 
-                    // Formatear el valor en 32 bits.
-                    string binaryValue = Convert.ToString(complementoUno, 2).PadLeft(32, '0');
-                    
-                    // Formatear la cadena binaria con separación de 4 bits por 4 bits.
-                    string formattedBinary = string.Join(" ", Enumerable.Range(0, 8).Select(i => binaryValue.Substring(i * 4, 4)));
+                    // Rellenar con ceros a la izquierda para tener 32 bits.
+                    binaryValue = binaryValue.PadLeft(32, '0');
 
+                    // Invertir los bits y dar formato en grupos de 4 bits.
+                    for (int i = 0; i < 32; i++)
+                    {
+                        complementoUno += (binaryValue[i] == '0') ? '1' : '0';
+                        if ((i + 1) % 4 == 0 && i != 31)
+                        {
+                            complementoUno += ' ';
+                        }
+                    }
+        
                     // Mostrar el valor en el Label lblResult.
-                    lblResult.Text = "Valor Binario: " + formattedBinary;
+                    lblResult.Text = "Entero con signo: " + txtData.Text + Environment.NewLine + "Valor Binario: " + complementoUno;
                 }
             }
             else if (cmbBoxTipeData.SelectedIndex == 2)
@@ -314,34 +322,34 @@ namespace BinaryDataManagement.Forms
                     string formattedBinary = string.Join(" ", Enumerable.Range(0, 8).Select(i => binaryValue.Substring(i * 4, 4)));
 
                     // Mostrar el bit más significativo y el valor binario completo en el Label lblResult.
-                    lblResult.Text = "Bit más significativo: " + msb.ToString() + Environment.NewLine + "Valor binario: " + formattedBinary;
+                    lblResult.Text = "Entero con signo: " + txtData.Text + Environment.NewLine + "Bit más significativo: " + msb.ToString() + Environment.NewLine + "Valor binario: " + formattedBinary;
                 }
             }
             else if (cmbBoxTipeData.SelectedIndex == 3)
             {
-                // Obtener el texto actual en txtData
+                // Obtener el texto actual en txtData.
                 string currentText = txtData.Text.Trim();
 
-                // Validar que el texto no termine con un punto
+                // Validar que el texto no termine con un punto.
                 if (currentText.EndsWith("."))
                 {
-                    // e.Handled = true; // Suprimir el carácter ingresado
+                    // e.Handled = true; // Suprimir el carácter ingresado.
                     MessageBox.Show("El carácter '.' no puede estar al final del cuadro de texto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtData.Focus(); // Regresar el enfoque al cuadro de texto
                     return;
                 }
 
-                // Convertir el texto a un número de punto flotante
+                // Convertir el texto a un número de punto flotante.
                 if (float.TryParse(currentText, out float floatValue))
                 {
-                    // Convertir el valor a su representación binaria de 32 bits
+                    // Convertir el valor a su representación binaria de 32 bits.
                     int intValue = BitConverter.ToInt32(BitConverter.GetBytes(floatValue), 0);
                     string binaryValue = Convert.ToString(intValue, 2).PadLeft(32, '0');
 
-                    // Formatear la cadena binaria con separación de 4 bits por 4 bits
+                    // Formatear la cadena binaria con separación de 4 bits por 4 bits.
                     string formattedBinary = string.Join(" ", Enumerable.Range(0, 8).Select(i => binaryValue.Substring(i * 4, 4)));
 
-                    // Mostrar la representación binaria en el Label lblResult
+                    // Mostrar la representación binaria en el Label lblResult.
                     lblResult.Text = "Número Flotante: " + txtData.Text + Environment.NewLine + "Valor Binario: " + formattedBinary;
                 }
             }
@@ -379,8 +387,8 @@ namespace BinaryDataManagement.Forms
                 lblResult.Text = "Cadena: " + txtData.Text + Environment.NewLine + "Valor Binario: " + formattedBinary;
             }
             
-            txtData.Clear();
-            txtData.Focus();
+            //txtData.Clear();
+            //txtData.Focus();
         }
     }        
 }
