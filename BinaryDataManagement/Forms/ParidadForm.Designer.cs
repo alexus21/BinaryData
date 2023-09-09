@@ -38,6 +38,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +55,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(14, 16);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(749, 680);
+            this.panel1.Size = new System.Drawing.Size(755, 704);
             this.panel1.TabIndex = 2;
             // 
             // lblError
@@ -74,7 +75,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(61, 246);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(647, 190);
+            this.richTextBox1.Size = new System.Drawing.Size(653, 190);
             this.richTextBox1.TabIndex = 10;
             this.richTextBox1.Text = "";
             // 
@@ -85,7 +86,7 @@
             this.textBox1.Location = new System.Drawing.Point(274, 59);
             this.textBox1.MaxLength = 7;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(245, 28);
+            this.textBox1.Size = new System.Drawing.Size(251, 28);
             this.textBox1.TabIndex = 9;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
@@ -118,7 +119,7 @@
             this.comboBox1.Items.AddRange(new object[] {"Seleccione una opción", "Paridad Par", "Paridad Impar"});
             this.comboBox1.Location = new System.Drawing.Point(274, 115);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(245, 30);
+            this.comboBox1.Size = new System.Drawing.Size(251, 30);
             this.comboBox1.TabIndex = 6;
             // 
             // button1
@@ -127,7 +128,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.button1.Location = new System.Drawing.Point(274, 160);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(245, 35);
+            this.button1.Size = new System.Drawing.Size(251, 35);
             this.button1.TabIndex = 5;
             this.button1.Text = "Validar";
             this.button1.UseVisualStyleBackColor = true;
@@ -137,11 +138,15 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 3000;
+            // 
             // ParidadForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(776, 713);
+            this.ClientSize = new System.Drawing.Size(782, 737);
             this.Controls.Add(this.panel1);
             this.Name = "ParidadForm";
             this.Text = "Paridad";
@@ -150,6 +155,8 @@
             ((System.ComponentModel.ISupportInitialize) (this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Timer timer1;
 
         private System.Windows.Forms.ErrorProvider errorProvider1;
 

@@ -7,22 +7,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74812ac0-cfd2-4abd-89ab-9ccd66bc7a3a" name="Changes" comment="Interfaz gráfica redimensionable">
-      <change afterPath="$PROJECT_DIR$/BinaryDataManagement/ParidadCorrection/Paridad.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BinaryDataManagement/ParidadCorrection/ParityType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BinaryDataManagement/ParidadCorrection/Validations.cs" afterDir="false" />
+    <list default="true" id="74812ac0-cfd2-4abd-89ab-9ccd66bc7a3a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BinaryDataManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BinaryDataManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BinaryDataManagement/BinaryDataManagement.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/BinaryDataManagement.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BinaryDataManagement/Forms/ParidadForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/Forms/ParidadForm.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BinaryDataManagement/Forms/ParidadForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/Forms/ParidadForm.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BinaryDataManagement/Forms/ParidadForm.resx" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/Forms/ParidadForm.resx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BinaryDataManagement/bin/Debug/BinaryDataManagement.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/bin/Debug/BinaryDataManagement.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BinaryDataManagement/bin/Debug/BinaryDataManagement.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/bin/Debug/BinaryDataManagement.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BinaryDataManagement/obj/Debug/BinaryDataManagement.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/obj/Debug/BinaryDataManagement.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BinaryDataManagement/obj/Debug/BinaryDataManagement.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/obj/Debug/BinaryDataManagement.csproj.GenerateResource.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BinaryDataManagement/obj/Debug/BinaryDataManagement.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/obj/Debug/BinaryDataManagement.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BinaryDataManagement/obj/Debug/BinaryDataManagement.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/obj/Debug/BinaryDataManagement.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BinaryDataManagement/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +105,7 @@
       <workItem from="1694205858592" duration="6988000" />
       <workItem from="1694223762551" duration="2061000" />
       <workItem from="1694229061837" duration="1006000" />
-      <workItem from="1694236396330" duration="6197000" />
+      <workItem from="1694236396330" duration="7322000" />
     </task>
     <task id="LOCAL-00001" summary="Interfaz gráfica redimensionable">
       <option name="closed" value="true" />
@@ -122,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694229380194</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Procesos del método de paridad">
+      <option name="closed" value="true" />
+      <created>1694242931333</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694242931335</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +133,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Interfaz gráfica redimensionable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Interfaz gráfica redimensionable" />
+    <MESSAGE value="Procesos del método de paridad" />
+    <option name="LAST_COMMIT_MESSAGE" value="Procesos del método de paridad" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
