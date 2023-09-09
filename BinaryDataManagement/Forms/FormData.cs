@@ -376,7 +376,7 @@ namespace BinaryDataManagement.Forms
                 
                 // Convertir cada carácter a su representación binaria de 8 bits.
                 string binaryValue = string.Join("", currentText.Select(c => Convert.ToString(c, 2).PadLeft(8, '0')));
-                
+                    
                 // Añadir ceros a la izquierda para que tenga 32 bits.
                 binaryValue = binaryValue.PadLeft(32, '0');
                 
@@ -387,8 +387,8 @@ namespace BinaryDataManagement.Forms
                 lblResult.Text = "Cadena: " + txtData.Text + Environment.NewLine + "Valor Binario: " + formattedBinary;
             }
             
-            //txtData.Clear();
-            //txtData.Focus();
+            txtData.Clear();
+            txtData.Focus();
         }
     }        
 }
