@@ -9,15 +9,12 @@
   <component name="ChangeListManager">
     <list default="true" id="74812ac0-cfd2-4abd-89ab-9ccd66bc7a3a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BinaryDataManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BinaryDataManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BinaryDataManagement/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/Form1.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BinaryDataManagement/Forms/CheckSumForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/Forms/CheckSumForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BinaryDataManagement/Forms/FormData.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/Forms/FormData.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BinaryDataManagement/Forms/FormData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/Forms/FormData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BinaryDataManagement/bin/Debug/BinaryDataManagement.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/bin/Debug/BinaryDataManagement.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BinaryDataManagement/bin/Debug/BinaryDataManagement.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/bin/Debug/BinaryDataManagement.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BinaryDataManagement/obj/Debug/BinaryDataManagement.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/obj/Debug/BinaryDataManagement.csproj.GenerateResource.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BinaryDataManagement/obj/Debug/BinaryDataManagement.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/obj/Debug/BinaryDataManagement.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BinaryDataManagement/obj/Debug/BinaryDataManagement.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/obj/Debug/BinaryDataManagement.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BinaryDataManagement/Forms/ParidadForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/Forms/ParidadForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BinaryDataManagement/Forms/ParidadForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/Forms/ParidadForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BinaryDataManagement/ParidadCorrection/Paridad.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/ParidadCorrection/Paridad.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BinaryDataManagement/ParidadCorrection/ParityType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/ParidadCorrection/ParityType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BinaryDataManagement/ParidadCorrection/Validations.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BinaryDataManagement/ParidadCorrection/Validations.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +105,7 @@
       <workItem from="1694223762551" duration="2061000" />
       <workItem from="1694229061837" duration="1006000" />
       <workItem from="1694236396330" duration="7322000" />
-      <workItem from="1694315437503" duration="611000" />
+      <workItem from="1694315437503" duration="3848000" />
     </task>
     <task id="LOCAL-00001" summary="Interfaz gráfica redimensionable">
       <option name="closed" value="true" />
@@ -126,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694242931335</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Responsividad de todas las interfaces">
+      <option name="closed" value="true" />
+      <created>1694316368069</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694316368069</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,7 +142,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Interfaz gráfica redimensionable" />
     <MESSAGE value="Procesos del método de paridad" />
-    <option name="LAST_COMMIT_MESSAGE" value="Procesos del método de paridad" />
+    <MESSAGE value="Responsividad de todas las interfaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="Responsividad de todas las interfaces" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

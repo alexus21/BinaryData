@@ -85,7 +85,7 @@
             this.dataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersWidth = 51;
-            this.dataGridView.Size = new System.Drawing.Size(997, 350);
+            this.dataGridView.Size = new System.Drawing.Size(997, 344);
             this.dataGridView.TabIndex = 8;
             // 
             // Column1
@@ -152,7 +152,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 580);
+            this.ClientSize = new System.Drawing.Size(1028, 574);
             this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.txtReceived);
