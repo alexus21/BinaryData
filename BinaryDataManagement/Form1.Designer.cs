@@ -22,7 +22,8 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnPariedad = new System.Windows.Forms.Button();
             this.btnMethodError = new System.Windows.Forms.Button();
@@ -40,16 +41,16 @@
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (51)))), ((int) (((byte) (51)))), ((int) (((byte) (76)))));
             this.panelMenu.Controls.Add(this.btnPariedad);
             this.panelMenu.Controls.Add(this.btnMethodError);
             this.panelMenu.Controls.Add(this.btnData);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(199, 583);
+            this.panelMenu.Size = new System.Drawing.Size(265, 726);
             this.panelMenu.TabIndex = 0;
             // 
             // btnPariedad
@@ -60,11 +61,11 @@
             this.btnPariedad.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnPariedad.Image = global::BinaryDataManagement.Properties.Resources.iconParidad;
             this.btnPariedad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPariedad.Location = new System.Drawing.Point(0, 171);
-            this.btnPariedad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPariedad.Location = new System.Drawing.Point(0, 210);
+            this.btnPariedad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPariedad.Name = "btnPariedad";
-            this.btnPariedad.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.btnPariedad.Size = new System.Drawing.Size(199, 49);
+            this.btnPariedad.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnPariedad.Size = new System.Drawing.Size(265, 60);
             this.btnPariedad.TabIndex = 3;
             this.btnPariedad.Text = "    Paridad";
             this.btnPariedad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -80,11 +81,11 @@
             this.btnMethodError.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnMethodError.Image = global::BinaryDataManagement.Properties.Resources.iconError;
             this.btnMethodError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMethodError.Location = new System.Drawing.Point(0, 122);
-            this.btnMethodError.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMethodError.Location = new System.Drawing.Point(0, 150);
+            this.btnMethodError.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMethodError.Name = "btnMethodError";
-            this.btnMethodError.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.btnMethodError.Size = new System.Drawing.Size(199, 49);
+            this.btnMethodError.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnMethodError.Size = new System.Drawing.Size(265, 60);
             this.btnMethodError.TabIndex = 2;
             this.btnMethodError.Text = "    Correccion de Errores";
             this.btnMethodError.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -100,11 +101,11 @@
             this.btnData.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnData.Image = global::BinaryDataManagement.Properties.Resources.iconBinary;
             this.btnData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnData.Location = new System.Drawing.Point(0, 73);
-            this.btnData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnData.Location = new System.Drawing.Point(0, 90);
+            this.btnData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnData.Name = "btnData";
-            this.btnData.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.btnData.Size = new System.Drawing.Size(199, 49);
+            this.btnData.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnData.Size = new System.Drawing.Size(265, 60);
             this.btnData.TabIndex = 1;
             this.btnData.Text = "    Conversion de Datos";
             this.btnData.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -114,37 +115,36 @@
             // 
             // panelLogo
             // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (39)))), ((int) (((byte) (39)))), ((int) (((byte) (58)))));
             this.panelLogo.Controls.Add(this.label1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(199, 73);
+            this.panelLogo.Size = new System.Drawing.Size(265, 90);
             this.panelLogo.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(73, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(97, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 20);
+            this.label1.Size = new System.Drawing.Size(62, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Menu";
             // 
             // panelTitleBar
             // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (150)))), ((int) (((byte) (136)))));
             this.panelTitleBar.Controls.Add(this.btnClose);
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(199, 0);
-            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelTitleBar.Location = new System.Drawing.Point(265, 0);
+            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(787, 65);
+            this.panelTitleBar.Size = new System.Drawing.Size(1052, 80);
             this.panelTitleBar.TabIndex = 1;
             // 
             // btnClose
@@ -154,25 +154,22 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = global::BinaryDataManagement.Properties.Resources.iconExit;
             this.btnClose.Location = new System.Drawing.Point(0, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(56, 65);
+            this.btnClose.Size = new System.Drawing.Size(75, 80);
             this.btnClose.TabIndex = 1;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // lblTitle
             // 
-            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(353, 21);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitle.Location = new System.Drawing.Point(471, 26);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(78, 26);
+            this.lblTitle.Size = new System.Drawing.Size(95, 31);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "HOME";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -180,22 +177,23 @@
             // panelDesktop
             // 
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(199, 65);
-            this.panelDesktop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDesktop.Location = new System.Drawing.Point(265, 80);
+            this.panelDesktop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(787, 518);
+            this.panelDesktop.Size = new System.Drawing.Size(1052, 646);
             this.panelDesktop.TabIndex = 2;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 583);
+            this.ClientSize = new System.Drawing.Size(1317, 726);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MinimumSize = new System.Drawing.Size(828, 509);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximumSize = new System.Drawing.Size(1700, 900);
+            this.MinimumSize = new System.Drawing.Size(1333, 765);
             this.Name = "Form1";
             this.Text = "Form1";
             this.panelMenu.ResumeLayout(false);
@@ -204,7 +202,6 @@
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         #endregion

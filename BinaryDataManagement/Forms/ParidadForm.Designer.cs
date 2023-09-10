@@ -55,7 +55,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(14, 16);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(755, 704);
+            this.panel1.Size = new System.Drawing.Size(755, 524);
             this.panel1.TabIndex = 2;
             // 
             // lblError
@@ -70,12 +70,12 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.richTextBox1.Location = new System.Drawing.Point(61, 246);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(653, 190);
+            this.richTextBox1.Size = new System.Drawing.Size(653, 182);
             this.richTextBox1.TabIndex = 10;
             this.richTextBox1.Text = "";
             // 
@@ -146,7 +146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 737);
+            this.ClientSize = new System.Drawing.Size(782, 552);
             this.Controls.Add(this.panel1);
             this.Name = "ParidadForm";
             this.Text = "Paridad";

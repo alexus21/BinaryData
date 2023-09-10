@@ -38,11 +38,11 @@
             // 
             // btnBinaryData
             // 
-            this.btnBinaryData.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBinaryData.Location = new System.Drawing.Point(793, 95);
+            this.btnBinaryData.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnBinaryData.Location = new System.Drawing.Point(797, 95);
             this.btnBinaryData.Margin = new System.Windows.Forms.Padding(4);
             this.btnBinaryData.Name = "btnBinaryData";
-            this.btnBinaryData.Size = new System.Drawing.Size(201, 36);
+            this.btnBinaryData.Size = new System.Drawing.Size(228, 36);
             this.btnBinaryData.TabIndex = 0;
             this.btnBinaryData.Text = "Convertir a binario";
             this.btnBinaryData.UseVisualStyleBackColor = true;
@@ -51,7 +51,7 @@
             // lblTipeData
             // 
             this.lblTipeData.AutoSize = true;
-            this.lblTipeData.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipeData.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblTipeData.Location = new System.Drawing.Point(124, 67);
             this.lblTipeData.Name = "lblTipeData";
             this.lblTipeData.Size = new System.Drawing.Size(228, 24);
@@ -61,7 +61,7 @@
             // lblBits
             // 
             this.lblBits.AutoSize = true;
-            this.lblBits.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBits.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblBits.Location = new System.Drawing.Point(428, 67);
             this.lblBits.Name = "lblBits";
             this.lblBits.Size = new System.Drawing.Size(335, 24);
@@ -84,14 +84,14 @@
             this.txtData.Margin = new System.Windows.Forms.Padding(4);
             this.txtData.Multiline = true;
             this.txtData.Name = "txtData";
-            this.txtData.Size = new System.Drawing.Size(331, 24);
+            this.txtData.Size = new System.Drawing.Size(335, 24);
             this.txtData.TabIndex = 4;
             this.txtData.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtData_KeyPress);
             // 
             // lblResult
             // 
             this.lblResult.AutoSize = true;
-            this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblResult.Location = new System.Drawing.Point(207, 309);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(0, 29);
@@ -101,7 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1113, 574);
+            this.ClientSize = new System.Drawing.Size(1117, 590);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.txtData);
             this.Controls.Add(this.cmbBoxTipeData);
@@ -113,7 +113,6 @@
             this.Load += new System.EventHandler(this.FormData_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

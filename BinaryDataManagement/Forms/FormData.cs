@@ -16,6 +16,7 @@ namespace BinaryDataManagement.Forms
         public FormData()
         {
             InitializeComponent();
+            lblBits.TextAlign = ContentAlignment.MiddleCenter;
         }
 
         private void FormData_Load(object sender, EventArgs e)
